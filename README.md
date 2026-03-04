@@ -833,8 +833,11 @@ Search by location, relationships, and more!.
 2.  ** oftoolbox **
     - Link: [oftoolbox](https://oftoolbox.net)
     - Description: OFToolbox.net is a list of the best tools for you to create, share and monetize adult content on platforms such as OnlyFans.
-      
-     
+
+3. **GeoInfer**
+   - Link: [GeoInfer](https://geoinfer.com)
+   - Description: AI-powered image geolocation tool that predicts the geographic location of a photo using deep learning, no EXIF data required.
+
 ## FAQ
 
 #### Is using Osint illegal ?
