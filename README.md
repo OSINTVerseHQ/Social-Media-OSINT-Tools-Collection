@@ -330,6 +330,10 @@ Search by location, relationships, and more!.
       - Link: [BirdHunt](https://birdhunt.huntintel.io/)
       - Description: Easily find social media posts surrounding a location.
 
+19. **Xquik**
+      - Link: [Xquik](https://xquik.com)
+      - Description: X (Twitter) OSINT & automation platform with 40+ tools for tweet search, user lookup, follower/following extraction, engagement metrics, account monitoring, reply/retweet/quote extraction, community & Space data, and mutual follow checks. Offers REST API, MCP server & webhooks.
+
 ## Pinterest
 
 1. **DownAlbum**
