@@ -206,6 +206,10 @@ Search by location, relationships, and more!.
       - Link: [instanavigation](https://instanavigation.com/)
       - Description: Anonymous story viewing on Instagram.
 
+16. **insto**
+      - Link: [insto](https://github.com/subzeroid/insto)
+      - Description: Interactive Instagram OSINT CLI with REPL and one-shot scriptable mode, snapshot/diff watch loop, Maltego CSV export, and pluggable HikerAPI/aiograpi backends.
+
 ## LinkedIn -
 
 1. **RecruitEm**
