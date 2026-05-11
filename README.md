@@ -330,6 +330,14 @@ Search by location, relationships, and more!.
       - Link: [BirdHunt](https://birdhunt.huntintel.io/)
       - Description: Easily find social media posts surrounding a location.
 
+19. **Xquik**
+      - Link: [Xquik](https://github.com/Xquik-dev/x-twitter-scraper)
+      - Description: X/Twitter data API and MCP skill for tweet search, profile tweets, follower export, media download, monitors, and webhooks.
+
+20. **TweetClaw**
+      - Link: [TweetClaw](https://github.com/Xquik-dev/tweetclaw)
+      - Description: OpenClaw plugin and npm package for public X/Twitter research workflows: search tweets and replies, look up users, export followers, review media, monitor tweets, and deliver webhook events through Xquik.
+
 ## Pinterest
 
 1. **DownAlbum**
