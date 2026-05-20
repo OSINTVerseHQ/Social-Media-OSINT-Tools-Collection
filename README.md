@@ -330,6 +330,10 @@ Search by location, relationships, and more!.
       - Link: [BirdHunt](https://birdhunt.huntintel.io/)
       - Description: Easily find social media posts surrounding a location.
 
+19. **TwitterAPI.io**
+      - Link: [TwitterAPI.io](https://twitterapi.io)
+      - Description: Real-time Twitter/X data API for tweets, user profiles, followers, advanced search and the live tweet stream via REST endpoints.
+
 ## Pinterest
 
 1. **DownAlbum**
