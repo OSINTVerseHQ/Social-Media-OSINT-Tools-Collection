@@ -833,8 +833,11 @@ Search by location, relationships, and more!.
 2.  ** oftoolbox **
     - Link: [oftoolbox](https://oftoolbox.net)
     - Description: OFToolbox.net is a list of the best tools for you to create, share and monetize adult content on platforms such as OnlyFans.
-      
-     
+
+3.  ** Social Fetch **
+    - Link: [Social Fetch](https://socialfetch.dev)
+    - Description: API for extracting public social media data across 16 platforms including Instagram, TikTok, YouTube, X/Twitter, Reddit, LinkedIn, Facebook, and more.
+
 ## FAQ
 
 #### Is using Osint illegal ?
