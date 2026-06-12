@@ -330,6 +330,10 @@ Search by location, relationships, and more!.
       - Link: [BirdHunt](https://birdhunt.huntintel.io/)
       - Description: Easily find social media posts surrounding a location.
 
+19. **Xquik**
+      - Link: [Xquik](https://github.com/Xquik-dev/x-twitter-scraper)
+      - Description: X (Twitter) data API and MCP server for tweet search, user lookup, follower and following extraction, account monitoring, trends, and engagement metrics.
+
 ## Pinterest
 
 1. **DownAlbum**
