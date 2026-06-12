@@ -66,7 +66,7 @@ The OSINT Ambition is a comprehensive and dynamic project aimed at empowering pe
 
 ## What is OSINT
 
-Open source intelligence (OSINT) is the practice of collecting information from published or otherwise publicly available sources. OSINT operations, whether practiced by IT security pros, malicious hackers, or state-sanctioned intelligence operatives, use advanced techniques to search through the vast haystack of visible data to find the needles they're looking for to achieve their goals—and learn information that many don't realize is public.
+Open source intelligence (OSINT) is the practice of collecting information from published or otherwise publicly available sources. OSINT operations, whether practiced by IT security pros, malicious hackers, or state-sanctioned intelligence operatives, use advanced techniques to search through the vast haystack of visible data to find the needles they're looking for to achieve their goals - and learn information that many don't realize is public.
 
 ## What is Social Media OSINT
 
@@ -329,6 +329,10 @@ Search by location, relationships, and more!.
 18. **BirdHunt**
       - Link: [BirdHunt](https://birdhunt.huntintel.io/)
       - Description: Easily find social media posts surrounding a location.
+
+19. **Xquik**
+      - Link: [Xquik](https://github.com/Xquik-dev/x-twitter-scraper)
+      - Description: X (Twitter) data API and MCP server for tweet search, user lookup, follower and following extraction, account monitoring, trends, and engagement metrics.
 
 ## Pinterest
 
