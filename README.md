@@ -827,6 +827,10 @@ Search by location, relationships, and more!.
 2.  ** oftoolbox **
     - Link: [oftoolbox](https://oftoolbox.net)
     - Description: OFToolbox.net is a list of the best tools for you to create, share and monetize adult content on platforms such as OnlyFans.
+
+3. **Jev Social**
+   - Link: [Jev Social](https://github.com/socai-io/jev-social)
+   - Description: Open-source social research agent for searching Instagram, TikTok, and LinkedIn in a local browser and producing cited reports from captured evidence.
       
      
 ## FAQ
