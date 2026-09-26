@@ -111,7 +111,6 @@ Social Media Osint, also known as Social media intelligence allows one to collec
 11. **Facebook Applications**
       - Link: [Facebook Applications](https://khalil-shreateh.com/khalil.shtml/social_applications/facebook-applications/)
       - Description: A collection of online tools that automate and facilitate Facebook.
-
 12. **Social Analyzer**
       - Link: [SocialAnalyzer - Social Sentiment & Analysis](https://chromewebstore.google.com/detail/socialanalyzer-social-sen/efeikkcpimdfpdlmlbjdecnmkknjcfcp)
       - Description: a free tool of social media monitoring and analysis.
@@ -798,7 +797,6 @@ Search by location, relationships, and more!.
 17. **OnlySuomi**
  - Link: [OnlySuomi](https://onlysuomi.fi/)
  - Description: Finnish-focused directory for discovering OnlyFans creators.
-
   
 ## TikTok
 
@@ -817,6 +815,10 @@ Search by location, relationships, and more!.
 4. **Exolyt**
    - Link: [exolyt](https://exolyt.com/)
    - Description: The best tool for TikTok analytics & insights.
+
+5. **Tiktok Video Downloader without watermark**
+   - Link: [Tiktok video downloader](https://snaptikk.io)
+   - Description: Snaptikk is an online tool designed to download TikTok videos without a watermark.
 
 ## Other
 
