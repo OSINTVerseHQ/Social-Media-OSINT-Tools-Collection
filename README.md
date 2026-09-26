@@ -799,6 +799,10 @@ Search by location, relationships, and more!.
  - Link: [OnlySuomi](https://onlysuomi.fi/)
  - Description: Finnish-focused directory for discovering OnlyFans creators.
 
+18. **VerifiedHer**
+ - Link: [VerifiedHer](https://verifiedher.com/)
+ - Description: Verification registry for online creators — per-creator pages with a sourced verdict (real / AI persona / unverified), the creator's documented official accounts, and known impersonation warnings. Useful for checking whether an account claiming to be a creator is actually hers.
+
   
 ## TikTok
 
