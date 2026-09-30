@@ -200,6 +200,10 @@ Search by location, relationships, and more!.
       - Link: [instanavigation](https://instanavigation.com/)
       - Description: Anonymous story viewing on Instagram.
 
+16. **GramScraper**
+      - Link: [GramScraper](https://gramscraper.com)
+      - Description: REST API for Instagram data extraction with 70+ endpoints. Retrieve public profiles, posts, stories, reels, comments, hashtags, and location data as structured JSON. Free tier with 100 credits.
+
 ## LinkedIn -
 
 1. **RecruitEm**
