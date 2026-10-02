@@ -599,6 +599,9 @@ Search by location, relationships, and more!.
 12. **AddMeS**
     - Link: [AddMeS](https://addmes.io/)
     - Description: The 'Add Me' directory of Snapchat users on web.
+13. **ViewSnapStories**
+    - Link: [ViewSnapStories](https://viewsnapstories.com/)
+    - Description: Snapchat anonymous story viewer and downloader.
 
 ## WhatsApp
 
