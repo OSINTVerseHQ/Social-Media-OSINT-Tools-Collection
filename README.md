@@ -705,27 +705,31 @@ Search by location, relationships, and more!.
    - Link: [DiscordOSINT](https://github.com/husseinmuhaisen/DiscordOSINT?tab=readme-ov-file#-discord-search-syntax-)
    - Description: This Repository Will contain useful resources to conduct research on Discord.
 
-2. **Discord.name**
+2. **VaultCord Discord ID Lookup**
+   - Link: [VaultCord](https://vaultcord.com/tools/discord-id-lookup)
+   - Description: Discord user lookup using user ID. Save avatar decorations, profile picture, and username effects.
+
+3. **Discord.name**
    - Link: [Discord.name](https://discord.name/)
    - Description: Discord profile lookup using user ID.
 
-3. **Lookupguru**
+4. **Lookupguru**
    - Link: [Lookupguru](https://lookup.guru/)
    - Description: Discord profile lookup using user ID.
 
-4. **Discord History Tracker**
+5. **Discord History Tracker**
    - Link: [Discord History Tracker](https://dht.chylex.com/      )
    - Description: Discord History Tracker lets you save chat history in your servers, groups, and private conversations, and view it offline.
 
-5. **Top.gg**
+6. **Top.gg**
    - Link: [Top.gg](https://top.gg/)
    - Description: Explore millions of Discord Bots.
 
-6. **Unofficial Discord Lookup**
+7. **Unofficial Discord Lookup**
    - Link: [Unofficial Discord Lookup](https://discord.id/)
    - Description: Search for discord profile using id.
 
-7. **Disboard**
+8. **Disboard**
    - Link: [Disboard](https://disboard.org/)
    - Description: DISBOARD is the place where you can list/find Discord servers.
 
