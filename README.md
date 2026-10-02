@@ -268,59 +268,63 @@ Search by location, relationships, and more!.
    - Link: [Wayback Tweets](https://waybacktweets.streamlit.app/)
    - Description: Display multiple archived tweets on Wayback Machine and avoid opening each link manually.
 
-5. **memory.lol**
+5. **PeekVault**
+   - Link: [PeekVault](https://peekvault.com/)
+   - Description: Search public X/Twitter captures from the Internet Archive CDX index, preview archived snapshots, and export results.
+
+6. **memory.lol**
    - Link: [memory.lol](https://memory.lol/app/)
    - Description: a tiny web service that provides historical information about twitter users.
 
-6. **SocialData API**
+7. **SocialData API**
    - Link: [SocialData API](https://socialdata.tools/)
    - Description: an unofficial Twitter API alternative that allows scraping historical tweets, user profiles, lists and Twitter spaces without using Twitter's API.
 
-7. **Social Bearing**
+8. **Social Bearing**
    - Link: [Social Bearing](https://socialbearing.com/)
    - Description: Insights & analytics for tweets & timelines.
 
-8. **Tinfoleak**
+9. **Tinfoleak**
    - Link: [Tinfoleak](https://tinfoleak.com/)
    - Description: Search for Twitter users leaks.
 
-9. **Network Tool**
+10. **Network Tool**
    - Link: [Network Tool](https://osome.iu.edu/tools/networks/)
    - Description: Explore how information spreads across Twitter with an interactive network using OSoMe data.
 
-10. **Foller**
+11. **Foller**
       - Link: [Foller](https://foller.me/)
       - Description: Looking for someone in the United States? Our free people search engine finds social media profiles, public records, and more!
 
-11. **SimpleScraper OSINT**
+12. **SimpleScraper OSINT**
       - Link: [SimpleScraper OSINT](https://airtable.com/appyDhNeSetZU0rIw/shrceHfvukijgln9q/tblxgilU0SzfXNEwS/viwde4ACDDOpeJ8aO?blocks=bipxY3tKD5Lx0wmEU)
       - Description: This Airtable automatically scrapes OSINT-related twitter accounts ever 3 minutes and saves tweets that contain coordinates.
 
-12. **Deleted Tweet Finder**
+13. **Deleted Tweet Finder**
       - Link: [Deleted Tweet Finder](https://cache.digitaldigging.org/)
       - Description: Search for deleted tweets across multiple archival services.
 
-13. **Twitter Search Tool**
+14. **Twitter Search Tool**
       - Link: [Twitter search tool](https://www.aware-online.com/en/osint-tools/twitter-search-tool/)
       - Description: On this page you can create advanced search queries within Twitter.
 
-14. **Twitter Video Downloader**
+15. **Twitter Video Downloader**
       - Link: [Twitter Video Downloader](https://twittervideodownloader.com/)
       - Description: Download Twitter videos & GIFs from tweets.
 
-15. **Download Twitter Data**
+16. **Download Twitter Data**
       - Link: [Download Twitter Data](https://www.twtdata.com/)
       - Description: Download Twitter data in csv format by entering any Twitter handle, keyword, hashtag, List ID or Space ID.
 
-16. **Twitonomy**
+17. **Twitonomy**
       - Link: [Twitonomy](https://www.twitonomy.com/)
       - Description: Twitter #analytics and much more.
 
-17. **tweeterid**
+18. **tweeterid**
       - Link: [tweeterid](https://tweeterid.com/)
       - Description: Type in any Twitter ID or @handle below, and it will be converted into the respective ID or username.
 
-18. **BirdHunt**
+19. **BirdHunt**
       - Link: [BirdHunt](https://birdhunt.huntintel.io/)
       - Description: Easily find social media posts surrounding a location.
 
