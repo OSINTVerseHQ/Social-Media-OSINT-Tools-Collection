@@ -324,6 +324,10 @@ Search by location, relationships, and more!.
       - Link: [BirdHunt](https://birdhunt.huntintel.io/)
       - Description: Easily find social media posts surrounding a location.
 
+19. **wyper AI Fact-Check**
+      - Link: [wyper AI Fact-Check](https://wyper.io/fact-check.html)
+      - Description: Fact-checks any X post, claim, image or video with a 1-10 truth score and linkable sources; two AI models cross-checked, X Community Notes read as a source, public proof page per shared check. Chrome/Firefox extension and web app, free tier.
+
 ## Pinterest
 
 1. **DownAlbum**
