@@ -200,6 +200,10 @@ Search by location, relationships, and more!.
       - Link: [instanavigation](https://instanavigation.com/)
       - Description: Anonymous story viewing on Instagram.
 
+16. **ig-harvester**
+      - Link: [ig-harvester](https://github.com/anurag-panda-dev/ig-harvester)
+      - Description: Open-source (MIT) Instagram OSINT harvester built on Playwright — collects posts, comment threads, followers/following and full-resolution images via your own logged-in Chrome, exports JSON/CSV/SQLite and ships a live local analysis dashboard.
+
 ## LinkedIn -
 
 1. **RecruitEm**
