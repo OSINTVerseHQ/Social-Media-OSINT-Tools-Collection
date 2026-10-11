@@ -829,6 +829,10 @@ Search by location, relationships, and more!.
     - Description: OFToolbox.net is a list of the best tools for you to create, share and monetize adult content on platforms such as OnlyFans.
       
      
+3. **Consensus OSINT**
+   - Link: [Consensus OSINT](https://github.com/OSINT-Experts-Society/Consensus-OSINT)
+   - Description: A local command-line tool for finding profiles by username, with enriched results and evidence graphs; also supports email and phone inputs.
+
 ## FAQ
 
 #### Is using Osint illegal ?
