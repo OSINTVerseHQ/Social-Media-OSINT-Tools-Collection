@@ -1,62 +1,36 @@
-# Social-Media-OSINT-Tools-Collection
+# Social Media OSINT Tools Collection
 
-A collection of most useful tools for social media osint.
+A curated collection of the most useful tools for social media OSINT, grouped by platform.
 
-## Some of our useful products for OSINT loves -
+Maintained by the [OSINTverse](https://osintverse.com) team. Pull requests are welcome.
 
-[OSINTverse](https://osintverse.com) is an OSINT ecosystem, Your go-to place for anything related to OSINT — tools in [SearchIn](https://osintverse.com/searchin), blogs and webinars on the Hub, and the community in the open. 
-SearchIn is a fully fledged investigation workspace — not a bookmark list. Start from an identifier, query every provider we integrate in one UI, compare structured results, and keep the trail in a case you can reopen. Prepaid credits. Your wallet or a shared team wallet.
+> **Tip for command-line tools:** entries marked with an `ot install …` line are open-source tools you can install and run by name with [otinstaller](https://github.com/OSINTVerseHQ/OTinstaller), a free MIT-licensed tool manager that puts each tool in its own virtualenv. See [Installing the command-line tools](#installing-the-command-line-tools).
 
+## Contents
 
-## Authors
-
-- [@osintambition](https://github.com/osintambition)
-
-- [@dheerajydv19](https://github.com/dheerajydv19)
-
-- [@swayamsopnic](https://twitter.com/Swayamsopnic16)
-
-
-## 🚀 About Us
-
-### The Osint Ambition
-The OSINT Ambition is a comprehensive and dynamic project aimed at empowering people with the skills and knowledge necessary to effectively leverage open source
-
-## Documentation
-
-[1. What is osint](#what-is-osint )
-
-[2. What is Social Media Osint](#what-is-social-media-osint )
-
-[3. Facebook](#Facebook-- )
-
-[4. Instagram](#instagram-- )
-
-[5. LinkedIn](#linkedin-- )
-
-[6. Twitter](#twitter-- )
-
-[7. Pinterest](#pinterest)
-
-[8. Reddit](#reddit)
-
-[9. Github](#github)
-
-[10. Snapchat](#Snapchat)
-
-[11. Whatsapp](#Whatsapp)
-
-[12. Skype](#Skype)
-
-[13. Telegram](#Telegram)
-
-[14. Discord](#Discord)
-
-[15. ONLYFANS](#ONLYFANS)
-
-[16. TikTok](#TikTok)
-
-[17. FAQs](#faq )
+1. [What is OSINT](#what-is-osint)
+2. [What is Social Media OSINT](#what-is-social-media-osint)
+3. [Installing the command-line tools](#installing-the-command-line-tools)
+4. [Username and cross-platform search](#username-and-cross-platform-search)
+5. [Facebook](#facebook)
+6. [Instagram](#instagram)
+7. [LinkedIn](#linkedin)
+8. [X (Twitter)](#x-twitter)
+9. [Pinterest](#pinterest)
+10. [Reddit](#reddit)
+11. [GitHub](#github)
+12. [Snapchat](#snapchat)
+13. [WhatsApp](#whatsapp)
+14. [Skype](#skype)
+15. [Telegram](#telegram)
+16. [Discord](#discord)
+17. [YouTube](#youtube)
+18. [OnlyFans](#onlyfans)
+19. [TikTok](#tiktok)
+20. [Other](#other)
+21. [Further reading and resources](#further-reading-and-resources)
+22. [FAQ](#faq)
+23. [Contributions](#contributions)
 
 ## What is OSINT
 
@@ -64,279 +38,349 @@ Open source intelligence (OSINT) is the practice of collecting information from 
 
 ## What is Social Media OSINT
 
-Social Media Osint, also known as Social media intelligence allows one to collect intelligence gathering from social media sites like Facebook, Twitter, Instagram etc. This type of intelligence gathering is one element of OSINT (Open- Source Intelligence).
+Social media OSINT, also known as social media intelligence (SOCMINT), is intelligence gathered from social media sites like Facebook, X (Twitter), Instagram and others. It is one element of open-source intelligence.
 
-## Facebook -
+## Installing the command-line tools
 
-1.  **Facebook Recover Lookup**
-      - Link: [Facebook Recover Lookup](https://www.facebook.com/login/identify?ctx=recover)
-      - Description: Used to check if a given email or phone number is associated with any Facebook account or not.
+Many of the GitHub tools in this list are Python projects, and each one installs a little differently. Rather than cloning and setting up each repo by hand, you can use [otinstaller](https://github.com/OSINTVerseHQ/OTinstaller) (Linux, Python 3.10–3.12) to install, run, update and remove them by name:
 
-2. **CrowdTangle Link Checker**
+```bash
+pipx install otinstaller
+ot init
+ot install sherlock maigret instaloader
+ot run --all u:johndoe
+```
+
+`u:`, `e:`, `p:` and `d:` mark a username, email, phone number or domain, and otinstaller passes them to each tool in its own syntax. Results are saved under `./results/<tool>/<target>/`. The full list of supported tools is in the [otinstaller docs](https://osintverse.gitbook.io/otinstaller).
+
+You can of course still install any of these tools straight from their own repositories.
+
+## Username and cross-platform search
+
+Most social media investigations start from a username, email or phone number. These tools check many platforms at once.
+
+1. **Sherlock**
+   - Link: [Sherlock](https://github.com/sherlock-project/sherlock)
+   - Description: Hunt down social media accounts by username across hundreds of social networks.
+   - Install: `ot install sherlock`
+
+2. **Maigret**
+   - Link: [Maigret](https://github.com/soxoj/maigret)
+   - Description: Collect a dossier on a person by username from thousands of sites, and parse profile pages for extra details.
+   - Install: `ot install maigret`
+
+3. **Blackbird**
+   - Link: [Blackbird](https://github.com/p1ngul1n0/blackbird)
+   - Description: Search for accounts by username and email across social networks.
+   - Install: `ot install blackbird`
+
+4. **socialscan**
+   - Link: [socialscan](https://github.com/iojw/socialscan)
+   - Description: Accurately check whether a username or email is in use on major online platforms.
+   - Install: `ot install socialscan`
+
+5. **Holehe**
+   - Link: [Holehe](https://github.com/megadose/holehe)
+   - Description: Check whether an email is registered on sites like X, Instagram and many more, using their password-reset flows.
+   - Install: `ot install holehe`
+
+6. **Linkook**
+   - Link: [Linkook](https://github.com/JackJuly/linkook)
+   - Description: Discover linked social accounts and associated emails across platforms from a single username.
+   - Install: `ot install linkook`
+
+7. **NExfil**
+   - Link: [NExfil](https://github.com/thewhiteh4t/nexfil)
+   - Description: Find profiles by username across a large list of sites.
+   - Install: `ot install nexfil`
+
+8. **user-scanner**
+   - Link: [user-scanner](https://github.com/kaifcodec/user-scanner)
+   - Description: Email and username OSINT suite that pulls data from a single email or username.
+   - Install: `ot install user-scanner`
+
+9. **SearchIn**
+   - Link: [SearchIn](https://osintverse.com/searchin)
+   - Description: Web-based search across breach, people, social and domain data providers from one email, username or phone number, with results kept in a case. Paid per lookup; useful when you need provider data that free tools don't reach.
+
+## Facebook
+
+1. **Facebook Recover Lookup**
+   - Link: [Facebook Recover Lookup](https://www.facebook.com/login/identify?ctx=recover)
+   - Description: Check whether a given email or phone number is associated with a Facebook account.
+
+2. **CrowdTangle Link Checker** *(discontinued by Meta in August 2024; kept for reference)*
    - Link: [CrowdTangle Link Checker](https://apps.crowdtangle.com/chrome-extension)
-   - Description: Shows the specific Facebook posts, Instagram posts, tweets, and subreddits that mention this link. It works for articles, as well as YouTube videos, Facebook videos, and more.
+   - Description: Showed the Facebook posts, Instagram posts, tweets and subreddits that mention a link.
 
 3. **Social Searcher**
    - Link: [Social Searcher](https://www.social-searcher.com/)
-   - Description: Allows you to monitor all public social mentions in social networks and the web.
+   - Description: Monitor public social mentions across social networks and the web.
 
 4. **Lookup-id.com**
    - Link: [Lookup-id.com](https://lookup-id.com/)
-   - Description: Helps you find the Facebook ID of anyone's profile or a Group.
+   - Description: Find the Facebook ID of a profile or group.
 
-5. **Who posted this**
-   - Link: [Who posted this](https://whopostedwhat.com/)
-   - Description: Facebook keyword search for people who work in the public interest. It allows you to search keywords on specific dates.
+5. **Who Posted What**
+   - Link: [Who Posted What](https://whopostedwhat.com/)
+   - Description: Facebook keyword search for people who work in the public interest. Lets you search keywords on specific dates.
 
-6. **Facebook Search**
-   - Link: [Facebook Search](https://www.sowsearch.info/)
-   - Description: Allows you to search on Facebook for posts, people, photos, etc., using some filters.
+6. **SOWsearch**
+   - Link: [SOWsearch](https://www.sowsearch.info/)
+   - Description: A simple interface for searching Facebook posts, people and photos with filters.
 
 7. **Facebook Graph Searcher**
    - Link: [Facebook Graph Searcher](https://intelx.io/tools?tab=facebook)
-   - Description: To search someone on Facebook.
+   - Description: Search for people on Facebook.
 
 8. **Facebook People Search**
    - Link: [Facebook People Search](https://www.facebook.com/directory/people/)
-   - Description: Search on Facebook by victim's name.
+   - Description: Search Facebook's people directory by name.
 
-9. **DumpItBlue**
+9. **DumpItBlue+**
    - Link: [DumpItBlue+](https://chrome.google.com/webstore/detail/dumpitblue%2B/igmgknoioooacbcpcfgjigbaajpelbfe/)
-   - Description: helps to dump Facebook stuff for analysis or reporting purposes.
+   - Description: Dump Facebook content for analysis or reporting.
 
 10. **Export Comments**
-      - Link: [Export Comments](https://exportcomments.com/)
-      - Description: Easily exports all comments from your social media posts to Excel file.
+    - Link: [Export Comments](https://exportcomments.com/)
+    - Description: Export comments from social media posts to an Excel file.
 
 11. **Facebook Applications**
-      - Link: [Facebook Applications](https://khalil-shreateh.com/khalil.shtml/social_applications/facebook-applications/)
-      - Description: A collection of online tools that automate and facilitate Facebook.
+    - Link: [Facebook Applications](https://khalil-shreateh.com/khalil.shtml/social_applications/facebook-applications/)
+    - Description: A collection of online tools that automate Facebook lookups.
 
 12. **Social Analyzer**
-      - Link: [SocialAnalyzer - Social Sentiment & Analysis](https://chromewebstore.google.com/detail/socialanalyzer-social-sen/efeikkcpimdfpdlmlbjdecnmkknjcfcp)
-      - Description: a free tool of social media monitoring and analysis.
+    - Link: [SocialAnalyzer - Social Sentiment & Analysis](https://chromewebstore.google.com/detail/socialanalyzer-social-sen/efeikkcpimdfpdlmlbjdecnmkknjcfcp)
+    - Description: A free social media monitoring and analysis extension.
 
 13. **AnalyzeID**
-      - Link: [AnalyzeID](https://analyzeid.com/)
-      - Description: Just looking for sites that supposedly may have the same owner. Including a FaceBook App ID match.
+    - Link: [AnalyzeID](https://analyzeid.com/)
+    - Description: Find sites that may share an owner, including by Facebook App ID match.
 
-14. **SOWsearch**
-      - Link: [sowsearch](https://www.sowsearch.info/)
-      - Description: a simple interface to show how the current Facebook search function works.
+14. **Facebook Matrix**
+    - Link: [Facebook Matrix](https://plessas.net/facebookmatrix)
+    - Description: Formulas for searching Facebook.
 
-15. **Facebook Matrix**
-      - Link: [FacebookMatrix](https://plessas.net/facebookmatrix)
-      - Description: Formulas for Searching Facebook.
-16. **Who posted what**
-      - Link: [Who Posted What](https://whopostedwhat.com/)
-      - Description: A non public Facebook keyword search for people who work in the public interest. It allows you to search keywords on specific dates.
-18. **StalkFace**
-      - Link: [StalkFace](https://stalkface.com/en/)
-      - Description: Toolkit to stalk someone on Facebook.
-19. **Search is Back**
-      - Link: [Search is Back](https://searchisback.com/)
-      - Description: ind people and events on Facebook
-Search by location, relationships, and more!.
+15. **StalkFace**
+    - Link: [StalkFace](https://stalkface.com/en/)
+    - Description: Toolkit for looking up public Facebook profile content.
 
-## Instagram -
- 
+16. **Search is Back**
+    - Link: [Search is Back](https://searchisback.com/)
+    - Description: Find people and events on Facebook by location, relationships and more.
+
+## Instagram
+
 1. **SnapInsta**
    - Link: [SnapInsta](https://snapinsta.app)
-   - Description: Download Photos, Videos, IGTV & more from a public Instagram account.
+   - Description: Download photos, videos, IGTV and more from a public Instagram account.
 
 2. **IFTTT Integrations**
    - Link: [IFTTT Instagram integrations](https://ifttt.com/instagram)
-   - Description: Popular Instagram workflows & automations.
+   - Description: Popular Instagram workflows and automations.
 
-3. **Pickuki**
-   - Link: [Pickuki](https://www.picuki.com/)
+3. **Picuki**
+   - Link: [Picuki](https://www.picuki.com/)
    - Description: Browse publicly available Instagram content without logging in.
 
-4. **IMGinn.io**
-   - Link: [IMGinn.io](https://imginn.io/)
-   - Description: view and download all the content on the social network Instagram all at one place. 
+4. **Imginn**
+   - Link: [Imginn](https://imginn.io/)
+   - Description: View and download Instagram content in one place.
 
 5. **Instaloader**
    - Link: [Instaloader](https://github.com/instaloader/instaloader)
-   - Description: Download pictures (or videos) along with their captions and other metadata from Instagram.
+   - Description: Download pictures or videos along with their captions and other metadata from Instagram.
+   - Install: `ot install instaloader`
 
-6. **SolG**
-      - Link: [SolG](https://github.com/yezz123/SoIG)
-      - Description: The Instagram OSINT Tool gets a range of information from an Instagram account that you normally wouldn't be able to get from just looking at their profile.
+6. **SoIG**
+   - Link: [SoIG](https://github.com/yezz123/SoIG)
+   - Description: Collects a range of information from an Instagram account that you can't see from the profile alone.
 
 7. **Osintgram**
-      - Link: [Osintgram](https://github.com/Datalux/Osintgram)
-      - Description: Osintgram is an OSINT tool on Instagram to collect, analyze, and run reconnaissance.
-     
+   - Link: [Osintgram](https://github.com/Datalux/Osintgram)
+   - Description: Interactive shell to collect, analyze and run reconnaissance on Instagram accounts.
+
 8. **Toutatis**
-      - Link: [toutatis](https://pypi.org/project/toutatis/)
-      - Description: It is a tool written to retrieve private information such as Phone Number, Mail Address, ID on Instagram accounts via API.
+   - Link: [Toutatis](https://github.com/megadose/toutatis)
+   - Description: Extract information such as emails, phone numbers and IDs from Instagram accounts.
+   - Install: `ot install toutatis`
 
 9. **instalooter**
-      - Link: [instalooter](https://pypi.org/project/instalooter/)
-      - Description: InstaLooter is a program that can download any picture or video associated from an Instagram profile, without any API access.
+   - Link: [instalooter](https://pypi.org/project/instalooter/)
+   - Description: Download any picture or video from an Instagram profile without API access.
 
-10. **Exportgram**
-      - Link: [Exportgram](https://exportgram.net/)
-      - Description: A web application made for people who want to export instagram comments into excel, csv and json formats.
+10. **instagram_monitor**
+    - Link: [instagram_monitor](https://github.com/misiektoja/instagram_monitor)
+    - Description: Track an Instagram account's activity and profile changes over time, with notifications.
+    - Install: `ot install instagram-monitor`
 
-11. **Profile Analyzer**
-      - Link: [Profile Analyzer](https://inflact.com/tools/profile-analyzer/)
-      - Description: Analyze any public profile on Instagram – the tool is free, unlimited, and secure. Enter a username to take advantage of precise statistics.
+11. **Instagram Location Search**
+    - Link: [Instagram Location Search](https://github.com/bellingcat/instagram-location-search)
+    - Description: Bellingcat tool that finds Instagram location IDs near given coordinates.
+    - Install: `ot install instagram-location-search`
 
-12. **Find Instagram User Id**
-      - Link: [Find Instagram User Id](https://www.codeofaninja.com/tools/find-instagram-user-id/)
-      - Description: This tool called "Find Instagram User ID" provides an easy way for developers and designers to get Instagram account numeric ID by username.
+12. **Exportgram**
+    - Link: [Exportgram](https://exportgram.net/)
+    - Description: Export Instagram comments to Excel, CSV and JSON.
 
-13. **Instahunt**
-      - Link: [Instahunt](https://instahunt.huntintel.io/)
-      - Description: Easily find social media posts surrounding a location.
+13. **Profile Analyzer**
+    - Link: [Profile Analyzer](https://inflact.com/tools/profile-analyzer/)
+    - Description: Free statistics for any public Instagram profile.
 
-14. **InstaFreeView**
-      - Link: [InstaFreeView](https://instafreeview.com/)
-      - Description: InstaFreeView Private Instagram Profile Viewer is a free app to view Instagram profile posts without login.
+14. **Find Instagram User ID**
+    - Link: [Find Instagram User ID](https://www.codeofaninja.com/tools/find-instagram-user-id/)
+    - Description: Get an Instagram account's numeric ID from its username.
 
-15. **InstaNavigation**
-      - Link: [instanavigation](https://instanavigation.com/)
-      - Description: Anonymous story viewing on Instagram.
+15. **Instahunt**
+    - Link: [Instahunt](https://instahunt.huntintel.io/)
+    - Description: Find Instagram posts around a location.
 
-## LinkedIn -
+16. **InstaFreeView**
+    - Link: [InstaFreeView](https://instafreeview.com/)
+    - Description: View Instagram profile posts without logging in.
+
+17. **InstaNavigation**
+    - Link: [InstaNavigation](https://instanavigation.com/)
+    - Description: Anonymous Instagram story viewing.
+
+## LinkedIn
 
 1. **RecruitEm**
    - Link: [RecruitEm](https://recruitin.net/)
-   - Description: Allows you to search social media profiles. It helps recruiters to create a Google boolean string that searches all public profiles.
+   - Description: Builds Google boolean strings that search public LinkedIn and other social profiles.
 
 2. **RocketReach**
    - Link: [RocketReach](https://rocketreach.co/person)
-   - Description: Allows you to programmatically search and lookup contact info over 700 million professionals and 35 million companies.
+   - Description: Look up contact information for professionals and companies.
 
-3. **Phantom Buster**
-   - Link: [Phantom Buster](https://phantombuster.com/phantombuster)
-   - Description: Automation tool suite that includes data extraction capabilities.
-     
-4. **linkedprospect**
+3. **PhantomBuster**
+   - Link: [PhantomBuster](https://phantombuster.com/phantombuster)
+   - Description: Automation suite that includes data extraction from LinkedIn and other platforms.
+
+4. **LinkedProspect Boolean Search**
    - Link: [LinkedIn Boolean Search](https://linkedprospect.com/linkedin-boolean-search-tool/#tool)
    - Description: Build a targeted list of LinkedIn people using boolean search.
 
 5. **ReverseContact**
-   - Link: [Reverse Email Lookup](https://www.reversecontact.com/)
-   - Description: Find Linked Profiles associated with any email.
+   - Link: [ReverseContact](https://www.reversecontact.com/)
+   - Description: Find LinkedIn profiles associated with an email.
 
 6. **LinkedIn Search Engine**
    - Link: [Programmable Search Engine](https://cse.google.com/cse?cx=daaf18e804f81bed0)
-   - Description: Programmable Search Engine for LinkedIn profiles.
+   - Description: Google Programmable Search Engine restricted to LinkedIn profiles.
 
 7. **Free People Search Tool**
    - Link: [Free People Search Tool](https://freepeoplesearchtool.com/#gsc.tab=0)
-   - Description: Find people easily online.
+   - Description: Find people on LinkedIn and other sites through search engines.
 
-8. **IntelligenceX Linkedin**
-   - Link: [IntelligenceX Linkedin](https://intelx.io/tools?tab=linkedin)
-   - Description: A webbased tool for searching someone on Linkedin.
+8. **IntelligenceX LinkedIn**
+   - Link: [IntelligenceX LinkedIn](https://intelx.io/tools?tab=linkedin)
+   - Description: Web-based tool for searching LinkedIn.
 
-9. **Linkedin Search Tool**
-   - Link: [Linkedin Search Tool](https://inteltechniques.com/tools/Linkedin.html)
-   - Description: Provides you a interface with various tools for Linkedin Osint.
+9. **IntelTechniques LinkedIn Tool**
+   - Link: [IntelTechniques LinkedIn Tool](https://inteltechniques.com/tools/Linkedin.html)
+   - Description: An interface that groups several LinkedIn search techniques.
 
 10. **LinkedInt**
-      - Link: [LinkedInt](https://github.com/vysecurity/LinkedInt)
-      - Description: Providing you with Linkedin Intelligence.
+    - Link: [LinkedInt](https://github.com/vysecurity/LinkedInt)
+    - Description: LinkedIn intelligence and employee enumeration.
 
 11. **InSpy**
-      - Link: [InSpy](https://github.com/jobroche/InSpy)
-      - Description: InSpy is a python based LinkedIn enumeration tool.
+    - Link: [InSpy](https://github.com/jobroche/InSpy)
+    - Description: Python-based LinkedIn enumeration tool.
 
 12. **CrossLinked**
-      - Link: [CrossLinked](https://github.com/m8sec/CrossLinked)
-      - Description: CrossLinked is a LinkedIn enumeration tool that uses search engine scraping to collect valid employee names from an organization. 
+    - Link: [CrossLinked](https://github.com/m8sec/CrossLinked)
+    - Description: Collects valid employee names from an organization through search engine scraping.
+    - Install: `ot install crosslinked`
 
-## Twitter -
- 
-1. **TweetDeck**
-   - Link: [TweetDeck](https://tweetdeck.twitter.com/)
-   - Description: Offers a more convenient Twitter experience by allowing you to view multiple timelines in one easy interface.
+## X (Twitter)
 
-2. **FollowerWonk**
-   - Link: [FollowerWonk](https://followerwonk.com/bio)
-   - Description: Helps you find Twitter accounts using bio and provides many other useful features.
+1. **X Pro (formerly TweetDeck)**
+   - Link: [X Pro](https://pro.x.com/)
+   - Description: View multiple timelines and searches side by side. Now requires an X Premium subscription.
 
-3. **Twitter Advanced Search**
-   - Link: [Twitter Advanced Search](https://twitter.com/search-advanced)
-   - Description: Allows you to search on Twitter using filters for better search results.
+2. **Followerwonk**
+   - Link: [Followerwonk](https://followerwonk.com/bio)
+   - Description: Search X accounts by bio, and compare followers.
+
+3. **X Advanced Search**
+   - Link: [X Advanced Search](https://x.com/search-advanced)
+   - Description: Search X with filters for accounts, dates, engagement and more.
 
 4. **Wayback Tweets**
    - Link: [Wayback Tweets](https://waybacktweets.streamlit.app/)
-   - Description: Display multiple archived tweets on Wayback Machine and avoid opening each link manually.
+   - Description: Display many archived tweets from the Wayback Machine without opening each link.
 
 5. **memory.lol**
    - Link: [memory.lol](https://memory.lol/app/)
-   - Description: a tiny web service that provides historical information about twitter users.
+   - Description: Historical usernames for X accounts.
 
 6. **SocialData API**
    - Link: [SocialData API](https://socialdata.tools/)
-   - Description: an unofficial Twitter API alternative that allows scraping historical tweets, user profiles, lists and Twitter spaces without using Twitter's API.
+   - Description: Unofficial X API alternative for historical tweets, profiles, lists and Spaces.
 
 7. **Social Bearing**
    - Link: [Social Bearing](https://socialbearing.com/)
-   - Description: Insights & analytics for tweets & timelines.
+   - Description: Insights and analytics for tweets and timelines.
 
 8. **Tinfoleak**
    - Link: [Tinfoleak](https://tinfoleak.com/)
-   - Description: Search for Twitter users leaks.
+   - Description: Search for information leaks from X users.
 
-9. **Network Tool**
+9. **OSoMe Network Tool**
    - Link: [Network Tool](https://osome.iu.edu/tools/networks/)
-   - Description: Explore how information spreads across Twitter with an interactive network using OSoMe data.
+   - Description: Explore how information spreads across X with an interactive network.
 
 10. **Foller**
-      - Link: [Foller](https://foller.me/)
-      - Description: Looking for someone in the United States? Our free people search engine finds social media profiles, public records, and more!
+    - Link: [Foller](https://foller.me/)
+    - Description: Analytics and topics for any public X profile.
 
 11. **SimpleScraper OSINT**
-      - Link: [SimpleScraper OSINT](https://airtable.com/appyDhNeSetZU0rIw/shrceHfvukijgln9q/tblxgilU0SzfXNEwS/viwde4ACDDOpeJ8aO?blocks=bipxY3tKD5Lx0wmEU)
-      - Description: This Airtable automatically scrapes OSINT-related twitter accounts ever 3 minutes and saves tweets that contain coordinates.
+    - Link: [SimpleScraper OSINT](https://airtable.com/appyDhNeSetZU0rIw/shrceHfvukijgln9q/tblxgilU0SzfXNEwS/viwde4ACDDOpeJ8aO?blocks=bipxY3tKD5Lx0wmEU)
+    - Description: An Airtable that scrapes OSINT-related X accounts and saves tweets that contain coordinates.
 
 12. **Deleted Tweet Finder**
-      - Link: [Deleted Tweet Finder](https://cache.digitaldigging.org/)
-      - Description: Search for deleted tweets across multiple archival services.
+    - Link: [Deleted Tweet Finder](https://cache.digitaldigging.org/)
+    - Description: Search for deleted tweets across multiple archival services.
 
-13. **Twitter Search Tool**
-      - Link: [Twitter search tool](https://www.aware-online.com/en/osint-tools/twitter-search-tool/)
-      - Description: On this page you can create advanced search queries within Twitter.
+13. **Aware Online Twitter Search Tool**
+    - Link: [Twitter search tool](https://www.aware-online.com/en/osint-tools/twitter-search-tool/)
+    - Description: Build advanced search queries for X.
 
 14. **Twitter Video Downloader**
-      - Link: [Twitter Video Downloader](https://twittervideodownloader.com/)
-      - Description: Download Twitter videos & GIFs from tweets.
+    - Link: [Twitter Video Downloader](https://twittervideodownloader.com/)
+    - Description: Download videos and GIFs from tweets.
 
 15. **Download Twitter Data**
-      - Link: [Download Twitter Data](https://www.twtdata.com/)
-      - Description: Download Twitter data in csv format by entering any Twitter handle, keyword, hashtag, List ID or Space ID.
+    - Link: [Download Twitter Data](https://www.twtdata.com/)
+    - Description: Download X data as CSV by handle, keyword, hashtag, list ID or Space ID.
 
 16. **Twitonomy**
-      - Link: [Twitonomy](https://www.twitonomy.com/)
-      - Description: Twitter #analytics and much more.
+    - Link: [Twitonomy](https://www.twitonomy.com/)
+    - Description: Detailed analytics for X accounts.
 
-17. **tweeterid**
-      - Link: [tweeterid](https://tweeterid.com/)
-      - Description: Type in any Twitter ID or @handle below, and it will be converted into the respective ID or username.
+17. **TweeterID**
+    - Link: [TweeterID](https://tweeterid.com/)
+    - Description: Convert an X handle to its numeric ID and back.
 
 18. **BirdHunt**
-      - Link: [BirdHunt](https://birdhunt.huntintel.io/)
-      - Description: Easily find social media posts surrounding a location.
+    - Link: [BirdHunt](https://birdhunt.huntintel.io/)
+    - Description: Find posts around a location.
 
 ## Pinterest
 
 1. **DownAlbum**
    - Link: [DownAlbum](https://chrome.google.com/webstore/detail/downalbum/cgjnhhjpfcdhbhlcmmjppicjmgfkppok)
-   - Description: Google Chrome extension for downloading albums of photos from various websites, including Pinterest.
+   - Description: Chrome extension for downloading photo albums from sites including Pinterest.
 
 2. **Experts PHP: Pinterest Photo Downloader**
    - Link: [Pinterest Photo Downloader](https://www.expertsphp.com/pinterest-photo-downloader.html)
-   - Description: Website providing a tool to download photos from Pinterest.
+   - Description: Download photos from Pinterest.
 
 3. **Pingroupie**
    - Link: [Pingroupie](http://pingroupie.com)
-   - Description: A Meta Search Engine for Pinterest that lets you discover Collaborative Boards, Influencers, Pins, and new Keywords.
+   - Description: Meta search engine for Pinterest group boards, influencers, pins and keywords.
 
 4. **Tailwind**
    - Link: [Tailwind](https://www.tailwindapp.com)
@@ -344,65 +388,67 @@ Search by location, relationships, and more!.
 
 5. **Pinterest Guest**
    - Link: [Pinterest Guest](https://addons.mozilla.org/en-US/firefox/addon/pinterest-guest)
-   - Description: Mozilla Firefox add-on for browsing Pinterest without logging in or creating an account.
+   - Description: Firefox add-on for browsing Pinterest without logging in.
 
 6. **SourcingLab: Pinterest**
    - Link: [SourcingLab: Pinterest](https://sourcinglab.io/search/pinterest)
-   - Description: Pinterest search feature for finding pins, boards, and users.
+   - Description: Search for pins, boards and users.
 
 ## Reddit
 
-1. **F5BOT**
-   - Link: [F5BOT](https://f5bot.com)
-   - Description: Receive notifications for new Reddit posts matching specific keywords.
+> Many Reddit search tools relied on the Pushshift archive, which has been restricted since 2023. Some of the tools below may return partial results.
+
+1. **F5Bot**
+   - Link: [F5Bot](https://f5bot.com)
+   - Description: Email notifications for new Reddit posts matching your keywords.
 
 2. **Karma Decay**
    - Link: [Karma Decay](http://karmadecay.com)
-   - Description: Reverse image search for finding similar or reposted images on Reddit.
+   - Description: Reverse image search for reposted images on Reddit.
 
 3. **Mostly Harmless**
-    - Link: [Mostly Harmless](http://kerrick.github.io/Mostly-Harmless/#features)
-    - Description: A suite of tools for Reddit, including user analysis, subreddit comparison, and more.
+   - Link: [Mostly Harmless](http://kerrick.github.io/Mostly-Harmless/#features)
+   - Description: Browser extension that shows Reddit discussions about the page you're on.
 
-4. **OSINT Combine: Reddit Post Analyzer**
-    - Link: [OSINT Combine: Reddit Post Analyzer](https://www.osintcombine.com/reddit-post-analyser)
-    - Description: Analyze and gather information from Reddit posts for OSINT purposes.
+4. **OSINT Combine: Reddit Post Analyser**
+   - Link: [Reddit Post Analyser](https://www.osintcombine.com/reddit-post-analyser)
+   - Description: Analyze and gather information from Reddit posts.
 
-5. **Phantom Buster**
-    - Link: [Phantom Buster](https://phantombuster.com/phantombuster?category=reddit)
-    - Description: Automation tool suite that includes Reddit data extraction capabilities.
+5. **PhantomBuster**
+   - Link: [PhantomBuster](https://phantombuster.com/phantombuster?category=reddit)
+   - Description: Automation suite with Reddit data extraction.
 
 6. **rdddeck**
-    - Link: [rdddeck](https://rdddeck.com)
-    - Description: Real-time dashboard for monitoring multiple Reddit communities.
+   - Link: [rdddeck](https://rdddeck.com)
+   - Description: Real-time dashboard for monitoring multiple subreddits.
 
 7. **Readr for Reddit**
-    - Link: [Readr for Reddit](https://chrome.google.com/webstore/detail/readr-forreddit/molhdaofohigaepljchpmfablknhabmo)
-    - Description: Google Chrome extension for an improved reading experience on Reddit.
+   - Link: [Readr for Reddit](https://chrome.google.com/webstore/detail/readr-forreddit/molhdaofohigaepljchpmfablknhabmo)
+   - Description: Chrome extension for an improved Reddit reading experience.
 
 8. **Reddit Archive**
-    - Link: [Reddit Archive](http://www.redditarchive.com)
-    - Description: Archive of Reddit posts and comments for historical reference.
+   - Link: [Reddit Archive](http://www.redditarchive.com)
+   - Description: Archive of Reddit front pages for historical reference.
 
 9. **Reddit Comment Search**
-    - Link: [Reddit Comment Search](https://redditcommentsearch.com)
-    - Description: Search for specific comments and conversations on Reddit.
+   - Link: [Reddit Comment Search](https://redditcommentsearch.com)
+   - Description: Search a user's Reddit comments.
 
 10. **Redditery**
     - Link: [Redditery](http://www.redditery.com)
-    - Description: Explore Reddit posts and comments based on various criteria.
+    - Description: Explore Reddit posts and comments by various criteria.
 
-11. **Reddit Hacks**
-    - Link: [Reddit Hacks](https://github.com/EdOverflow/hacks)
-    - Description: Collection of Reddit hacks and tricks for advanced users.
+11. **Hacks (EdOverflow)**
+    - Link: [Hacks](https://github.com/EdOverflow/hacks)
+    - Description: Collection of web tricks and tools, including Reddit techniques.
 
 12. **Reddit List**
     - Link: [Reddit List](http://redditlist.com)
-    - Description: Directory of popular subreddits organized by various categories.
+    - Description: Directory of popular subreddits by category.
 
-13. **reddtip**
-    - Link: [reddtip](https://www.redditp.com)
-    - Description: Show appreciation to Reddit users by sending them tips in cryptocurrencies.
+13. **RedditP**
+    - Link: [RedditP](https://www.redditp.com)
+    - Description: View a subreddit's images as a full-screen slideshow.
 
 14. **Reddit Search**
     - Link: [Reddit Search (realsrikar)](https://realsrikar.github.io/reddit-search)
@@ -410,452 +456,490 @@ Search by location, relationships, and more!.
     - Link: [Reddit Search (redditsearch.io)](https://www.redditsearch.io)
     - Link: [Reddit Search (reddit-search)](http://reddit-search.surge.sh)
     - Link: [Reddit Search (react-reddit-search-app)](https://react-reddit-search-app.web.app)
-    - Link: [Reddit Search (viralharia)](https://viralharia.github.io/finddit)
-    - Description: Various tools and websites for searching and discovering content on Reddit.
+    - Link: [Finddit](https://viralharia.github.io/finddit)
+    - Description: Various tools for searching posts and comments on Reddit.
 
 15. **Reddit Shell**
     - Link: [Reddit Shell](https://redditshell.com)
-    - Description: Command-line interface for browsing and interacting with Reddit.
+    - Description: Command-line style interface for browsing Reddit.
 
 16. **Reddit Stream**
     - Link: [Reddit Stream](http://reddit-stream.com)
-    - Description: Live-streaming of Reddit comments for real-time discussions.
+    - Description: Live stream of comments in a Reddit thread.
 
-17. **Reddit Suite**
-    - Link: [Reddit Enhancement Suite (Chrome Extension)](https://chrome.google.com/webstore/detail/redditenhancementsuite/kbmfpngjjgdllneeigpgjifpgocmfgmb)
-    - Link: [Reddit Enhancement Suite (Firefox Add-on)](https://addons.mozilla.org/enGB/firefox/addon/reddit-enhancement-suite)
-    - Description: Browser extension that enhances the Reddit browsing experience with additional features.
+17. **Reddit Enhancement Suite**
+    - Link: [Reddit Enhancement Suite (Chrome)](https://chrome.google.com/webstore/detail/redditenhancementsuite/kbmfpngjjgdllneeigpgjifpgocmfgmb)
+    - Link: [Reddit Enhancement Suite (Firefox)](https://addons.mozilla.org/en-GB/firefox/addon/reddit-enhancement-suite)
+    - Description: Browser extension that adds features to Reddit browsing.
 
 18. **Reddit User Analyser**
     - Link: [Reddit User Analyser](https://atomiks.github.io/reddit-user-analyser)
-    - Description: Analyze and visualize the activity and behavior of Reddit users.
+    - Description: Analyze and visualize the activity of a Reddit user.
 
 19. **redditvids**
     - Link: [redditvids](https://redditvids.com)
-    - Description: Watch Reddit videos and browse popular video subreddits.
+    - Description: Watch Reddit videos and browse video subreddits.
 
-18. **Redective**
+20. **Redective**
     - Link: [Redective](http://redective.com)
-    - Description: Investigate and analyze Reddit users based on their post history.
+    - Description: Investigate Reddit users based on their post history.
 
-19. **Reditr**
+21. **Reditr**
     - Link: [Reditr](http://reditr.com)
-    - Description: Desktop Reddit client with a clean and intuitive interface.
+    - Description: Desktop Reddit client.
 
-20. **Reeddit**
+22. **Reeddit**
     - Link: [Reeddit](https://reedditapp.com)
-    - Description: Simplified and clean Reddit web interface for a distraction-free browsing experience.
+    - Description: Minimal Reddit web client.
 
-21. **ReSavr**
+23. **ReSavr**
     - Link: [ReSavr](https://www.resavr.com)
-    - Description: Retrieve and save deleted Reddit comments for later viewing.
+    - Description: Find deleted Reddit comments.
 
-22. **smat**
-    - Link: [smat](https://www.smat-app.com/timeline)
-    - Description: Social media analytics tool that includes Reddit for tracking trends and engagement.
+24. **SMAT**
+    - Link: [SMAT](https://www.smat-app.com/timeline)
+    - Description: Social media analysis toolkit for tracking terms over time, including on Reddit.
 
-23. **socid_extractor**
+25. **socid_extractor**
     - Link: [socid_extractor](https://github.com/soxoj/socid_extractor)
-    - Description: Extract user information from Reddit and other social media platforms.
+    - Description: Turn a profile URL from Reddit and 150+ other sites into a structured record.
+    - Install: `ot install socid-extractor`
 
-24. **Suggest me a subreddit**
+26. **Suggest me a subreddit**
     - Link: [Suggest me a subreddit](https://nikas.praninskas.com/suggest-subreddit)
-    - Description: Get recommendations for new subreddits to explore based on your preferences.
+    - Description: Subreddit recommendations based on your interests.
 
-25. **Subreddits**
+27. **Subreddits**
     - Link: [Subreddits](http://subreddits.org)
-    - Description: Directory of active subreddits organized by various categories.
-     
-26. **uforio**
+    - Description: Directory of active subreddits by category.
+
+28. **uforio**
     - Link: [uforio](http://uforio.com)
-    - Description: Generate word clouds from Reddit comment threads.
+    - Description: Word clouds from Reddit comment threads.
 
-27. **Universal Reddit Scraper (URS)**
+29. **Universal Reddit Scraper (URS)**
     - Link: [Universal Reddit Scraper (URS)](https://github.com/JosephLai241/URS)
-    - Description: Python-based tool for scraping Reddit data for analysis.
+    - Description: Scrape Reddit posts, comments and users for analysis.
 
-28. **Vizit**
+30. **Vizit**
     - Link: [Vizit](https://redditstuff.github.io/sna/vizit)
-    - Description: Visualize and analyze relationships between Reddit users and subreddits.
+    - Description: Visualize relationships between subreddits.
 
-29. **Wisdom of Reddit**
+31. **Wisdom of Reddit**
     - Link: [Wisdom of Reddit](https://wisdomofreddit.com)
-    - Description: Curated collection of insightful quotes and comments from Reddit.
+    - Description: Search insightful Reddit comments.
 
-
-## Github
+## GitHub
 
 1. **Awesome Lists**
    - Link: [Awesome Lists](http://awesomelists.top)
-   - Description: A curated list of awesome lists for various programming languages, frameworks, and tools.
+   - Description: Searchable index of "awesome" lists on GitHub.
 
 2. **CoderStats**
    - Link: [CoderStats](https://coderstats.net)
-   - Description: A platform for developers to track and showcase their coding activity and statistics from GitHub.
+   - Description: Coding activity statistics for a GitHub user.
 
-3. **Commit-stream**
-   - Link: [Commit-stream](https://github.com/x1sec/commit-stream)
-   - Description: A tool for monitoring and collecting GitHub commits in real-time.
+3. **commit-stream**
+   - Link: [commit-stream](https://github.com/x1sec/commit-stream)
+   - Description: Monitor GitHub commits in real time, filtered by email domain or keyword.
 
 4. **Digital Privacy**
    - Link: [Digital Privacy](https://github.com/ffffffff0x/Digital-Privacy)
-   - Description: A collection of resources and tools for enhancing digital privacy and security.
+   - Description: Collection of resources on digital privacy and security.
 
-5. **Find Github User ID**
-   - Link: [Find Github User ID](http://caius.github.io/github_id)
-   - Description: A web tool for finding the unique identifier (ID) of a GitHub user.
+5. **Find GitHub User ID**
+   - Link: [Find GitHub User ID](http://caius.github.io/github_id)
+   - Description: Find the numeric ID of a GitHub user.
 
 6. **GH Archive**
    - Link: [GH Archive](http://www.gharchive.org)
-   - Description: A project that provides a public dataset of GitHub activity, including events and metadata.
+   - Description: Public dataset of GitHub activity events.
 
 7. **Git-Awards**
    - Link: [Git-Awards](http://git-awards.com)
-   - Description: A website that ranks GitHub users and repositories based on their contributions and popularity.
+   - Description: Ranks GitHub users by stars per language and location.
 
 8. **GitGot**
    - Link: [GitGot](https://github.com/BishopFox/GitGot)
-   - Description: A semi-automated, feedback-driven tool for auditing Git repositories.
+   - Description: Semi-automated, feedback-driven tool for searching public GitHub data for secrets.
 
 9. **gitGraber**
    - Link: [gitGraber](https://github.com/hisxo/gitGraber)
-   - Description: A tool for searching and cloning sensitive information in GitHub repositories.
+   - Description: Monitor GitHub for sensitive data in real time.
 
 10. **git-hound**
     - Link: [git-hound](https://github.com/tillson/git-hound)
-    - Description: A tool for finding sensitive information exposed in GitHub repositories.
+    - Description: Find sensitive information exposed in GitHub repositories.
 
-11. **Github Dorks**
-    - Link: [Github Dorks](https://github.com/techgaun/github-dorks)
-    - Description: A collection of GitHub dorks, which are search queries to find sensitive information in repositories.
+11. **GitHub Dorks**
+    - Link: [GitHub Dorks](https://github.com/techgaun/github-dorks)
+    - Description: GitHub search queries for finding sensitive information.
 
-12. **Github Stars**
-    - Link: [Github Stars](http://githubstars.com)
-    - Description: A website that showcases GitHub repositories with the most stars and popularity.
+12. **GitHub Stars**
+    - Link: [GitHub Stars](http://githubstars.com)
+    - Description: Showcases popular GitHub repositories.
 
-13. **Github Trending RSS**
-    - Link: [Github Trending RSS](https://mshibanami.github.io/GitHubTrendingRSS)
-    - Description: An RSS feed generator for trending repositories on GitHub.
+13. **GitHub Trending RSS**
+    - Link: [GitHub Trending RSS](https://mshibanami.github.io/GitHubTrendingRSS)
+    - Description: RSS feeds for trending repositories.
 
-14. **Github Username Search Engine**
-    - Link: [Github Username Search Engine](https://jonnygovish.github.io/Github-username-search-engine)
-    - Description: A search engine to find GitHub usernames based on various filters and criteria.
+14. **GitHub Username Search Engine**
+    - Link: [GitHub Username Search Engine (jonnygovish)](https://jonnygovish.github.io/Github-username-search-engine)
+    - Link: [GitHub Username Search Engine (githubnotes)](https://githubnotes-47071.firebaseapp.com/#/?_k=n0bgxn)
+    - Description: Search for GitHub users with filters.
 
-15. **Github Username Search Engine**
-    - Link: [Github Username Search Engine](https://githubnotes-47071.firebaseapp.com/#/?_k=n0bgxn)
-    - Description: Another search engine to find GitHub usernames with advanced filtering options.
-
-16. **GitHut**
+15. **GitHut**
     - Link: [GitHut](https://githut.info)
-    - Description: A website that provides statistics and visualizations of programming languages on GitHub.
-
+    - Description: Statistics and visualizations of programming languages on GitHub.
 
 ## Snapchat
 
 1. **addmeContacts**
    - Link: [addmeContacts](http://add-me-contacts.com)
-   - Description: A platform to find and connect with new contacts on various social media platforms.
+   - Description: Directory of usernames for Snapchat and other platforms.
 
 2. **AddMeSnaps**
    - Link: [AddMeSnaps](https://www.addmesnaps.com)
-   - Description: A website for discovering and adding new Snapchat friends.
+   - Description: Directory for discovering Snapchat users.
 
 3. **ChatToday**
    - Link: [ChatToday](https://chattoday.com)
-   - Description: An online chat platform for connecting and chatting with people from around the world.
+   - Description: Directory of usernames for chat apps.
 
 4. **Gebruikersnamen: Snapchat**
    - Link: [Gebruikersnamen: Snapchat](https://gebruikersnamen.nl/snapchat)
-   - Description: A website for finding Snapchat usernames.
+   - Description: Find Snapchat usernames.
 
 5. **GhostCodes**
    - Link: [GhostCodes](https://www.ghostcodes.com)
-   - Description: An app for discovering new Snapchat users and their stories.
+   - Description: Discover Snapchat users and their stories.
 
-6. **OSINT Combine: Snapchat MultiViewer**
-   - Link: [OSINT Combine: Snapchat MultiViewer](https://www.osintcombine.com/snapchat-multi-viewer)
-   - Description: A tool for viewing multiple Snapchat accounts simultaneously.
+6. **OSINT Combine: Snapchat Multi-Viewer**
+   - Link: [Snapchat Multi-Viewer](https://www.osintcombine.com/snapchat-multi-viewer)
+   - Description: View public Snap Map content from several locations at once.
 
 7. **Snap Map**
-    - Link: [Snap Map](https://map.snapchat.com)
-    - Description: Snapchat's feature that allows users to share their location and view Snaps from around the world.
+   - Link: [Snap Map](https://map.snapchat.com)
+   - Description: Public Snaps from around the world on a map.
 
-8. **Snapchat-mapscraper**
-    - Link: [Snapchat-mapscraper](https://github.com/nemec/snapchat-map-scraper)
-    - Description: A tool for scraping public Snapchat Stories from the Snap Map.
+8. **snapchat-map-scraper**
+   - Link: [snapchat-map-scraper](https://github.com/nemec/snapchat-map-scraper)
+   - Description: Scrape public Snapchat stories from the Snap Map.
 
 9. **Snap Political Ads Library**
-    - Link: [Snap Political Ads Library](https://www.snap.com/en-GB/political-ads)
-    - Description: Snapchat's library of political ads displayed on the platform.
+   - Link: [Snap Political Ads Library](https://www.snap.com/en-GB/political-ads)
+   - Description: Snapchat's library of political ads.
 
 10. **Social Finder**
     - Link: [Social Finder](https://socialfinder.app)
-    - Description: A platform to search and discover social media profiles on various platforms.
+    - Description: Search for social media profiles across platforms.
 
 11. **SnapIntel**
     - Link: [SnapIntel](https://github.com/Kr0wZ/SnapIntel)
-    - Description: a python tool providing you information about Snapchat users.
+    - Description: Python tool that gathers information about Snapchat users.
 
 12. **AddMeS**
     - Link: [AddMeS](https://addmes.io/)
-    - Description: The 'Add Me' directory of Snapchat users on web.
+    - Description: "Add me" directory of Snapchat users.
 
 ## WhatsApp
 
 1. **checkwa**
    - Link: [checkwa](https://checkwa.online)
-   - Description: An online tool to check the status and availability of WhatsApp numbers.
+   - Description: Check whether phone numbers are registered on WhatsApp.
 
 2. **WhatsApp Fake Chat**
    - Link: [WhatsApp Fake Chat](http://www.fakewhats.com/generator)
-   - Description: An online tool to generate fake WhatsApp conversations for fun or pranks.
+   - Description: Generate fake WhatsApp conversations. Useful for training and for recognizing fabricated screenshots.
 
-3. **Whatsapp Monitor**
-   - Link: [Whatsapp Monitor](https://github.com/ErikTschierschke/WhatsappMonitor)
-   - Description: A tool for monitoring and analyzing WhatsApp messages and activities.
+3. **WhatsappMonitor**
+   - Link: [WhatsappMonitor](https://github.com/ErikTschierschke/WhatsappMonitor)
+   - Description: Monitor and analyze WhatsApp activity.
 
 4. **whatsfoto**
    - Link: [whatsfoto](https://github.com/zoutepopcorn/whatsfoto)
-   - Description: A Python script to download profile pictures from WhatsApp contacts.
+   - Description: Download WhatsApp profile pictures.
 
+5. **whatsapp-osint**
+   - Link: [whatsapp-osint](https://github.com/jasperan/whatsapp-osint)
+   - Description: Log a WhatsApp account's online and offline events.
+   - Install: `ot install whatsapp-osint`
 
 ## Skype
 
+> Microsoft retired Skype in May 2025. These tools are kept for historical lookups.
+
 1. **addmeContacts**
    - Link: [addmeContacts](http://add-me-contacts.com)
-   - Description: A platform to find and connect with new contacts on various social media platforms.
+   - Description: Directory of usernames for Skype and other platforms.
 
 2. **ChatToday**
    - Link: [ChatToday](https://chattoday.com)
-   - Description: An online chat platform for connecting and chatting with people from around the world.
+   - Description: Directory of usernames for chat apps.
 
 3. **Skypli**
    - Link: [Skypli](https://www.skypli.com)
-   - Description: A website for discovering and connecting with new Skype contacts.
-
+   - Description: Search for Skype users.
 
 ## Telegram
 
 1. **ChatBottle: Telegram**
    - Link: [ChatBottle: Telegram](https://chatbottle.co/bots/telegram)
-   - Description: A directory of Telegram bots for various purposes.
+   - Description: Directory of Telegram bots.
 
 2. **ChatToday**
    - Link: [ChatToday](https://chattoday.com)
-   - Description: An online chat platform for connecting and chatting with people from around the world.
+   - Description: Directory of usernames for chat apps.
 
 3. **informer**
    - Link: [informer](https://github.com/paulpierre/informer)
-   - Description: A Python library for retrieving information about Telegram channels, groups, and users.
+   - Description: Telegram mass surveillance and monitoring bot framework.
 
-4. **_IntelligenceX: Telegram**
-   - Link: [_IntelligenceX: Telegram](https://intelx.io/tools?tab=telegram)
-   - Description: IntelligenceX's Telegram tool for searching and analyzing Telegram data.
+4. **IntelligenceX: Telegram**
+   - Link: [IntelligenceX: Telegram](https://intelx.io/tools?tab=telegram)
+   - Description: Search and analyze Telegram data.
 
-5. **Lyzem.com**
-   - Link: [Lyzem.com](https://lyzem.com)
-   - Description: A website to search and find Telegram groups and channels.
-     
-7. **Telegram Channels**
-    - Link: [Telegram Channels](https://telegramchannels.me)
-    - Description: A directory of Telegram channels covering various topics.
+5. **Lyzem**
+   - Link: [Lyzem](https://lyzem.com)
+   - Description: Search Telegram groups and channels.
 
-8. **Telegram Channels**
-    - Link: [Telegram Channels](https://tlgrm.eu/channels)
-    - Description: A platform to discover and browse Telegram channels.
+6. **Telegram Channels**
+   - Link: [telegramchannels.me](https://telegramchannels.me)
+   - Link: [tlgrm.eu](https://tlgrm.eu/channels)
+   - Description: Directories of Telegram channels by topic.
 
-9. **Telegram Channels Search**
-    - Link: [Telegram Channels Search](https://xtea.io/ts_en.html)
-    - Description: A search engine to find Telegram channels by keywords.
+7. **Telegram Channels Search**
+   - Link: [Telegram Channels Search](https://xtea.io/ts_en.html)
+   - Description: Search engine for Telegram channels by keyword.
 
-10. **Telegram Directory**
-    - Link: [Telegram Directory](https://tdirectory.me)
-    - Description: A comprehensive directory of Telegram channels, groups, and bots.
+8. **Telegram Directory**
+   - Link: [Telegram Directory](https://tdirectory.me)
+   - Description: Directory of Telegram channels, groups and bots.
 
-11. **Telegram Group**
-    - Link: [Telegram Group](https://www.telegram-group.com)
-    - Description: A website to search and join Telegram groups.
+9. **Telegram Group**
+   - Link: [Telegram Group](https://www.telegram-group.com)
+   - Description: Search and join Telegram groups.
 
-12. **telegram-history-dump**
+10. **telegram-history-dump**
     - Link: [telegram-history-dump](https://github.com/tvdstaaij/telegram-history-dump)
-    - Description: A Python script to dump the history of a Telegram chat into a SQLite database.
+    - Description: Dump the history of Telegram chats.
 
-13. **Telegram-osint-lib**
-    - Link: [Telegram-osint-lib](https://github.com/Postuf/telegram-osint-lib)
-    - Description: A Python library for performing open-source intelligence (OSINT) on Telegram.
+11. **telegram-osint-lib**
+    - Link: [telegram-osint-lib](https://github.com/Postuf/telegram-osint-lib)
+    - Description: Library for performing OSINT on Telegram.
 
-14. **Telegram Scraper**
-    - Link: [Telegram Scraper](https://github.com/th3unkn0n/TeleGram-Scraper)
-    - Description: A powerful Telegram scraping tool for extracting user information and media.
+12. **TeleGram-Scraper**
+    - Link: [TeleGram-Scraper](https://github.com/th3unkn0n/TeleGram-Scraper)
+    - Description: Scrape members and media from Telegram groups.
+
+13. **Telepathy**
+    - Link: [Telepathy](https://github.com/jordanwildon/Telepathy)
+    - Description: Toolkit for investigating Telegram chats and accounts.
+    - Install: `ot install telepathy`
+
+14. **Telegram Phone Number Checker**
+    - Link: [Telegram Phone Number Checker](https://github.com/bellingcat/telegram-phone-number-checker)
+    - Description: Bellingcat tool that checks whether phone numbers are connected to Telegram accounts.
+    - Install: `ot install telegram-phone-number-checker`
 
 15. **Tgram.io**
     - Link: [Tgram.io](https://tgram.io)
-    - Description: A platform to explore and search for Telegram channels, groups, and bots.
+    - Description: Search Telegram channels, groups and bots.
 
-17. **Tgstat.com**
-    - Link: [Tgstat.com](https://tgstat.com)
-    - Description: A comprehensive platform for analyzing and tracking Telegram channels and groups.
+16. **TGStat**
+    - Link: [TGStat](https://tgstat.com)
+    - Link: [TGStat RU](https://tgstat.ru)
+    - Description: Analytics and search for Telegram channels and groups.
 
-18. **Tgstat RU**
-    - Link: [Tgstat RU](https://tgstat.ru)
-    - Description: A Russian platform for analyzing and monitoring Telegram channels and groups.
-      
 ## Discord
+
 1. **DiscordOSINT**
-   - Link: [DiscordOSINT](https://github.com/husseinmuhaisen/DiscordOSINT?tab=readme-ov-file#-discord-search-syntax-)
-   - Description: This Repository Will contain useful resources to conduct research on Discord.
+   - Link: [DiscordOSINT](https://github.com/husseinmuhaisen/DiscordOSINT)
+   - Description: Resources for conducting research on Discord, including search syntax.
 
 2. **Discord.name**
    - Link: [Discord.name](https://discord.name/)
-   - Description: Discord profile lookup using user ID.
+   - Description: Discord profile lookup by user ID.
 
-3. **Lookupguru**
-   - Link: [Lookupguru](https://lookup.guru/)
-   - Description: Discord profile lookup using user ID.
+3. **Lookup Guru**
+   - Link: [Lookup Guru](https://lookup.guru/)
+   - Description: Discord profile lookup by user ID.
 
 4. **Discord History Tracker**
-   - Link: [Discord History Tracker](https://dht.chylex.com/      )
-   - Description: Discord History Tracker lets you save chat history in your servers, groups, and private conversations, and view it offline.
+   - Link: [Discord History Tracker](https://dht.chylex.com/)
+   - Description: Save chat history from servers, groups and DMs and view it offline.
 
 5. **Top.gg**
    - Link: [Top.gg](https://top.gg/)
-   - Description: Explore millions of Discord Bots.
+   - Description: Directory of Discord bots and servers.
 
-6. **Unofficial Discord Lookup**
-   - Link: [Unofficial Discord Lookup](https://discord.id/)
-   - Description: Search for discord profile using id.
+6. **Discord.id**
+   - Link: [Discord.id](https://discord.id/)
+   - Description: Unofficial Discord profile lookup by ID.
 
 7. **Disboard**
    - Link: [Disboard](https://disboard.org/)
-   - Description: DISBOARD is the place where you can list/find Discord servers.
+   - Description: List and find public Discord servers.
 
-## ONLYFANS
+## YouTube
+
+1. **Yark**
+   - Link: [Yark](https://github.com/Owez/yark)
+   - Description: Archive YouTube channels, including metadata changes and deleted videos, and browse them offline.
+   - Install: `ot install yark`
+
+2. **Auto Archiver**
+   - Link: [Auto Archiver](https://github.com/bellingcat/auto-archiver)
+   - Description: Bellingcat tool that archives posts and media from YouTube, X, Telegram, TikTok and more.
+   - Install: `ot install auto-archiver`
+
+## OnlyFans
 
 1. **OnlyFans Finder**
-   - Link: [The Favourite OnlyFans search](https://onlyfansfinder.co/)
-   - Description: The tools allow easy searching via advanced filtering capabilities and sorting functionality, making it easy to access desired material.
+   - Link: [OnlyFans Finder](https://onlyfansfinder.co/)
+   - Description: Search with advanced filtering and sorting.
 
 2. **OnlyFam**
-   - Link: [OnlyFam] (https://onlyfam.com)
-   - Description: OnlyFans Search & Model Finder - Find Creators in the World’s Largest OnlyFans Database
-   
+   - Link: [OnlyFam](https://onlyfam.com)
+   - Description: OnlyFans search and creator finder.
+
 3. **OnlyFinder**
    - Link: [OnlyFinder](https://onlyfinder.com/)
-   - Description: OnlyFans Search Engine - OnlyFans Account Finder.
+   - Description: OnlyFans account search engine.
 
 4. **OnlySearch**
    - Link: [OnlySearch](https://onlysearch.co/)
-   - Description: Find OnlyFans profiles by searching for key words.
+   - Description: Find OnlyFans profiles by keyword.
 
-5. **Sotugas**
+5. **SóTugas**
    - Link: [SóTugas](https://sotugas.com/)
-   - Description: Encontra Contas do OnlyFans Portugal 🇵🇹.
+   - Description: Find OnlyFans accounts in Portugal.
 
 6. **Fansmetrics**
    - Link: [Fansmetrics](https://fansmetrics.com/)
-   - Description: Use this OnlyFans Finder to search in 3,000,000 OnlyFans Accounts.
+   - Description: Search across millions of OnlyFans accounts.
 
 7. **Findr.fans**
    - Link: [Findr.fans](https://findr.fans/)
-   - Description: Only Fans Search Tool.
+   - Description: OnlyFans search tool.
 
 8. **Hubite**
    - Link: [Hubite](https://hubite.com/en/onlyfans-search/)
-   - Description: Advanced OnlyFans Search Engine.
+   - Description: Advanced OnlyFans search engine.
 
-9. **Similarfans**
-   - Link: [Similarfans](https://similarfans.com/)
-   - Description: Blog for OnlyFans content creators.
+9. **SimilarFans**
+   - Link: [SimilarFans](https://similarfans.com/)
+   - Description: Find similar OnlyFans creators.
 
 10. **Fansearch**
-   - Link: [Fansearch](https://www.fansearch.com/)
-   - Description: Fansearch is the best OnlyFans Finder to search in 3,000,000 OnlyFans Accounts.
+    - Link: [Fansearch](https://www.fansearch.com/)
+    - Description: Search across millions of OnlyFans accounts.
 
-11. **Fulldp**
-   - Link: [Fulldp](https://fulldp.co/onlyfans-full-size-profile-picture/)
-   - Description: Download Onlyfans Full-Size Profile Pictures.
+11. **FullDP**
+    - Link: [FullDP](https://fulldp.co/onlyfans-full-size-profile-picture/)
+    - Description: Download full-size OnlyFans profile pictures.
 
 12. **SecretFans**
- - Link: [SecretFans](https://secretfans.net/)
- - Description: Search engine for discovering OnlyFans creators and profiles.
-  
+    - Link: [SecretFans](https://secretfans.net/)
+    - Description: Search engine for OnlyFans creators and profiles.
+
 13. **GirlFindr**
- - Link: [GirlFindr](https://girlfindr.com/)
- - Description: Finder tool to explore and locate OnlyFans creators.
+    - Link: [GirlFindr](https://girlfindr.com/)
+    - Description: Finder tool for OnlyFans creators.
 
 14. **FreeFans.nl**
- - Link: [FreeFans.nl](https://freefans.nl/)
- - Description: Free directory listing OnlyFans creators, primarily focused on Dutch creators.
+    - Link: [FreeFans.nl](https://freefans.nl/)
+    - Description: Directory of OnlyFans creators, focused on the Netherlands.
 
 15. **FreeFans.de**
- - Link: [FreeFans.de](https://freefans.de/)
- - Description: German-based OnlyFans listing and discovery platform.
+    - Link: [FreeFans.de](https://freefans.de/)
+    - Description: Directory of OnlyFans creators, focused on Germany.
 
 16. **OnlyBritish**
- - Link: [OnlyBritish](https://onlybritish.uk/)
- - Description: Platform showcasing OnlyFans creators from the United Kingdom.
+    - Link: [OnlyBritish](https://onlybritish.uk/)
+    - Description: Directory of OnlyFans creators from the United Kingdom.
 
 17. **OnlySuomi**
- - Link: [OnlySuomi](https://onlysuomi.fi/)
- - Description: Finnish-focused directory for discovering OnlyFans creators.
+    - Link: [OnlySuomi](https://onlysuomi.fi/)
+    - Description: Directory of OnlyFans creators from Finland.
 
-  
 ## TikTok
 
 1. **Mavekite**
    - Link: [Mavekite](https://mavekite.com/)
-   - Description: Search the profile using username.
+   - Description: Look up a TikTok profile by username.
 
-2. **TikTok hashtag analysis toolset**
-   - Link: [TikTok hashtag analysis toolset](https://github.com/bellingcat/tiktok-hashtag-analysis)
-   - Description: The tool helps to download posts and videos from TikTok for a given set of hashtags over a period of time.
+2. **TikTok Hashtag Analysis**
+   - Link: [TikTok Hashtag Analysis](https://github.com/bellingcat/tiktok-hashtag-analysis)
+   - Description: Download posts and videos for a set of hashtags over a period of time.
 
-3. **TikTok Video Downloader**
-   - Link: [TikTok Video Downloader](https://ssstik.io/en-1)
-   - Description: ssstiktok is a free TikTok video downloader without watermark tool that helps you download TikTok videos without watermark (Musically) online.
+3. **SSSTik**
+   - Link: [SSSTik](https://ssstik.io/en-1)
+   - Description: Download TikTok videos without the watermark.
 
 4. **Exolyt**
-   - Link: [exolyt](https://exolyt.com/)
-   - Description: The best tool for TikTok analytics & insights.
+   - Link: [Exolyt](https://exolyt.com/)
+   - Description: TikTok analytics and insights.
 
 ## Other
 
-1. ** Alfred OSINT**
+1. **Alfred OSINT**
    - Link: [Alfred OSINT](https://github.com/Alfredredbird/alfred)
-   - Description: A Open-source tool for descovering social media accounts.
-  
-2.  ** oftoolbox **
-    - Link: [oftoolbox](https://oftoolbox.net)
-    - Description: OFToolbox.net is a list of the best tools for you to create, share and monetize adult content on platforms such as OnlyFans.
-      
-     
+   - Description: Open-source tool for discovering social media accounts.
+
+2. **OFToolbox**
+   - Link: [OFToolbox](https://oftoolbox.net)
+   - Description: List of tools for creating, sharing and monetizing content on platforms such as OnlyFans.
+
+3. **GraphIn**
+   - Link: [GraphIn](https://osintverse.com/graphin)
+   - Description: Browser-based link analysis. Map how accounts, emails, phone numbers and domains connect, and share the case map read-only.
+
+## Further reading and resources
+
+- [Awesome OSINT](https://github.com/jivoi/awesome-osint) – a broader curated list covering every OSINT discipline.
+- [Bellingcat Online Investigation Toolkit](https://bellingcat.gitbook.io/toolkit) – tool write-ups with usage notes and limits.
+- [otinstaller](https://github.com/OSINTVerseHQ/OTinstaller) – install and run the open-source tools in this list by name ([docs](https://osintverse.gitbook.io/otinstaller), [1.5-minute demo](https://youtu.be/_AfUGMFRaKA)).
+- [OSINT learning path](https://osintverse.com/resources/course) – a step-by-step course from first search to a full case.
+- [The Hub](https://hub.osintverse.com) – field notes and webinars on OSINT techniques.
+- [OSINT Collective](https://osintverse.com/collective) – a monthly virtual meetup for investigators.
+- [OSINTCon archive](https://osintverse.com/osintcon) – recorded talks from a past virtual OSINT conference.
+- [OSINTOne API](https://osintverse.com/developers) – one key and one schema for many OSINT data providers, if you want to script lookups.
+
 ## FAQ
 
-#### Is using Osint illegal ?
+#### Is using OSINT illegal?
 
-No, using osint is legal but if you use the information gatered via osint for illegal or with wrong intentions, then that will be illegal.
+No. Collecting publicly available information is legal in most places, but using it for illegal purposes or with harmful intent is not. Check the laws in your jurisdiction and each platform's terms before you start.
 
-#### Are these the only tools exist for social media osint ?
+#### Are these the only tools for social media OSINT?
 
-No, their exists a lot of tool for social media osint, we have just listed the best ones.
+No. There are many more; this list covers the ones we have found most useful. See [Further reading and resources](#further-reading-and-resources) for broader lists.
 
-#### Where can we get more tools for social media osint ?
+#### How do I install the command-line tools here?
 
-We will be listing many other tools in future in this repo, we will try to maintain for long and will keep adding more and more.
+Each GitHub project has its own install instructions. If you're on Linux, the tools marked with `ot install …` can be installed in one step with [otinstaller](#installing-the-command-line-tools).
+
+#### Where can I find more tools for social media OSINT?
+
+We keep adding tools to this repo. You can also suggest one by opening an issue or a pull request.
 
 ## Contributions
 
-Contributions are always welcome!
+Contributions are always welcome! Open an issue or a pull request, or reach us on any of the channels below with suggestions.
 
-You can contact us any time on any of our social media platforms for any kind of suggestions and Contributions.
+- Email: [hi@osintverse.com](mailto:hi@osintverse.com)
+- Website: [osintverse.com](https://osintverse.com)
+- GitHub: [@OSINTVerseHQ](https://github.com/OSINTVerseHQ)
+- X (Twitter): [@osintversehq](https://x.com/osintversehq)
+- LinkedIn: [OSINTverse](https://www.linkedin.com/company/osintverse)
+- YouTube: [@osintversehq](https://www.youtube.com/@osintversehq)
+- Reddit: [r/OSINTVerse](https://www.reddit.com/r/OSINTVerse/)
 
-Official Mail - osintambition@gmail.com
+## Authors
 
-GitHub - [https://github.com/osintambition](https://github.com/osintambition)
+- [@OSINTVerseHQ](https://github.com/OSINTVerseHQ)
+- [@dheerajydv19](https://github.com/dheerajydv19)
+- [@swayamsopnic](https://twitter.com/Swayamsopnic16)
 
-Twitter - [https://twitter.com/osintambition](https://twitter.com/osintambition)
-
-Telegram - [https://t.me/osintambition](https://t.me/osintambition)
-
-
-Developed with ❤️ in India 🇮🇳 
+Developed with ❤️ in India 🇮🇳
